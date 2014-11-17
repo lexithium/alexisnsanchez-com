@@ -9,30 +9,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body id="home">
-	<div class="topruler"></div>
-	<div class="navigation">
-		<ul class="nav-sections">
-			<li><a href="#home">home</a></li>
-			<li><a href="#section-2">about</a></li>
-			<li><a href="#section-1">portfolio</a></li>
-			<li><a href="#section-3">résumé</a></li>
-			<li><a href="#section-4">contact</a></li>
-		</ul>
-	</div>
-	<form id="respon-nav" action="#" method="post">
-		<select style="width:220px;">
-			<option value="#home">Home</option>
-			<option value="#section-2">About</option>
-			<option value="#section-1">Portfolio</option>
-			<option value="#section-3">Résumé</option>
-			<option value="#section-4">Contact</option>
-		</select>
-	</form>
-	<div class="web-container">
-		<div class="logogo">
-			<img src="images/alexLogo.png" alt="" draggable="false">
-		</div>
-	</div>
+	<div id="header"></div>
 	<div class="web-container" id="section-2" style="position:relative;">
 		<div class="one-third">
 			<img class="circle-photo" src="images/dev.jpg" alt="" draggable="false"/>
@@ -291,100 +268,9 @@
 			Python</p>
 		</div>
 	</div>
-	<div id="section-4">
-		<div class="web-container" style="margin-top:0;">
-			<a href="mailto:ans@alexisnsanchez.com"><img src="images/gmail.png" alt="" draggable="false" class="contact-tools"></a>
-			<a href="http://www.twitter.com/ansanchezdesign" target="_blank"><img src="images/twitter.png" alt="" draggable="false" class="contact-tools"></a>
-			<a href="http://www.ansanchezdesign.tumblr.com" target="_blank"><img src="images/tumblr.png" alt="" draggable="false" class="contact-tools"></a>
-			<a href="http://www.linkedin.com/pub/alexis-n-sanchez/3a/3b3/264" target="_blank"><img src="images/linkedin.png" alt="" draggable="false" class="contact-tools" style="padding-right:0;"></a>
-			<br/>
-			<br/>
-			© Created and designed by Alexis N. Sanchez, 2014
-		</div>
-	</div>
+	<div id="footer"></div>
 	<script type="text/javascript" src="js/masonry.min.js"></script>
 	<script type="text/javascript" src="js/isotope.min.js"></script>
-	<script type="text/javascript">
-		//================= smooth scroll =====================
-		//=====================================================
-
-		$(function() {
-			$('a[href*=#]:not([href=#])').click(function() {
-				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-					var target = $(this.hash);
-					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-					if (target.length) {
-						$('html,body').animate({
-						scrollTop: target.offset().top - 40
-						}, 600);
-						return false;
-					}
-				}
-			});
-		});
-
-		//================= navigation ========================
-		//=====================================================
-
-		$('.navigation').css('margin-right',$('.web-container').offset().left);
-		$('#respon-nav').css('margin-right',$('.web-container').offset().left);
-
-		$(document).ready(function(){		
-			jQuery("#respon-nav select").change(function() {
-				window.location = jQuery(this).find("option:selected").val();
-			});
-		});
-
-		//================== masonry ============================
-		//=======================================================
-
-		var $container = $('#web-container-mason');
-		//initialize
-		$container.isotope({
-			itemSelector: '.project',
-			resizeable: false,
-			masonry: {
-				columnWidth: $container.width()/4
-			}
-		});
-
-		//=================== filter buttons ====================
-		//=======================================================
-
-		var filterButtons = $('.filter-buttons li a');
-
-		filterButtons.click(function() {
-			var selector = $(this).attr('data-filter');
-			$container.isotope({filter: selector});
-
-			$(document).find('.selected').addClass('dormant');
-			$(document).find('.selected').removeClass('selected');
-
-			$(this).removeClass('dormant');
-			$(this).addClass('selected');
-
-			return false;
-		});
-
-		//======================= resize ========================
-		//=======================================================
-
-		$(window).resize(function() {
-			setTimeout(function() {
-				var $container = $('#web-container-mason');
-				//initialize
-				$container.isotope({
-					itemSelector: '.project',
-					resizeable: false,
-					masonry: {
-						columnWidth: $container.width()/4
-					}
-				});
-
-				$('.navigation').css('margin-right',$('.web-container').offset().left);
-				$('#respon-nav').css('margin-right',$('.web-container').offset().left);
-			},500);
-		});
-	</script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

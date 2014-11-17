@@ -49,12 +49,12 @@ module.exports = function(grunt) {
 					spawn: false,
 				},
 			},
-			// script: {
-			// 	files: ['js/*.js'],
-			// 	options: {
-			// 		spawn: false,
-			// 	},
-			// },
+			script: {
+				files: ['js/*.js'],
+				options: {
+					spawn: false,
+				},
+			},
 		},
 	});
 
