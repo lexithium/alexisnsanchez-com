@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alexis N. Sanchez | Developer & Designer</title>
+	<meta charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans:400,400italic,600,600italic,300,300italic|Old+Standard+TT:400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<style type="text/css">
+		p {
+			line-height:1.7em;
+		}
+	</style>
+</head>
+<body>
+	<div class="topruler"></div>
+	<div class="navigation">
+		<ul class="nav-sections">
+			<li><a href="index.html#home">home</a></li>
+			<li><a href="index.html#section-2">about</a></li>
+			<li><a href="index.html#section-1">portfolio</a></li>
+			<li><a href="index.html#section-3">résumé</a></li>
+			<li><a href="#section-4">contact</a></li>
+		</ul>
+	</div>
+	<form id="respon-nav" action="#" method="post">
+		<select style="width:220px;">
+			<option value="index.html#home">Home</option>
+			<option value="index.html#section-2">About</option>
+			<option value="index.html#section-1">Portfolio</option>
+			<option value="index.html#section-3">Résumé</option>
+			<option value="#section-4">Contact</option>
+		</select>
+	</form>
+	<div class="web-container">
+		<div class="logogo">
+			<img src="images/alexLogo.png" alt="" draggable="false">
+		</div>
+	</div>
+	<div class="web-container">
+		<div class="pageruler"></div>
+	</div>
+	<div class="web-container">
+		<!--End navigation/header and begin content-->
+		<p>For the 2013 winter quarter, I returned as <a href="http://www.northbynorthwestern.com/library"><em>North by Northwestern</em></a>'s creative director. Maintaining my redesign from fall quarter, I worked with print managing editor Anca Ulea to create a new issue.</p>
+		<div class="web-container-small">
+			<img class="first" src="images/ind-portfolio/wintnbn4.jpg">
+			<img src="images/ind-portfolio/wintnbn14.jpg" width="375px" height="251px" style="float:left;margin-top:60px;">
+			<img src="images/ind-portfolio/wintnbn13.jpg" width="375px" height="251px" style="float:right;margin-top:60px;">
+			<img class="first" src="images/ind-portfolio/wintnbn5.jpg">
+			<img class="first" src="images/ind-portfolio/wintnbn6.jpg">
+			<img class="first" src="images/ind-portfolio/wintnbn7.jpg">
+			<img class="first" src="images/ind-portfolio/wintnbn8.jpg">
+			<img class="first" src="images/ind-portfolio/wintnbn11.jpg">
+			<img src="images/ind-portfolio/wintnbn9.jpg" width="375px" height="251px" style="float:left;margin-top:60px;">
+			<img src="images/ind-portfolio/wintnbn10.jpg" width="375px" height="251px" style="float:right;margin-top:60px;">
+			<img src="images/ind-portfolio/wintnbn1.jpg" width="375px" height="251px" style="clear:both;float:left;margin-top:60px;">
+			<img src="images/ind-portfolio/wintnbn3.jpg" width="375px" height="251px" style="float:right;margin-top:60px;">
+			<img class="first" src="images/ind-portfolio/wintnbn12.jpg" style="margin-bottom:60px;">
+		</div>
+	<!--End container-->
+	</div>
+	<div id="section-4">
+		<div class="web-container" style="margin-top:0;">
+			<a href="mailto:ansanchezdesign@gmail.com"><img src="images/gmail.png" alt="" draggable="false" class="contact-tools"></a>
+			<a href="http://www.twitter.com/ansanchezdesign" target="_blank"><img src="images/twitter.png" alt="" draggable="false" class="contact-tools"></a>
+			<a href="http://www.ansanchezdesign.tumblr.com" target="_blank"><img src="images/tumblr.png" alt="" draggable="false" class="contact-tools"></a>
+			<a href="http://www.linkedin.com/pub/alexis-n-sanchez/3a/3b3/264" target="_blank"><img src="images/linkedin.png" alt="" draggable="false" class="contact-tools" style="padding-right:0;"></a>
+			<br/>
+			<br/>
+			© Created and designed by Alexis N. Sanchez, 2014
+		</div>
+	</div>
+	<script type="text/javascript">
+		//================= smooth scroll =====================
+		//=====================================================
+
+		$(function() {
+			$('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					if (target.length) {
+						$('html,body').animate({
+						scrollTop: target.offset().top - 40
+						}, 600);
+						return false;
+					}
+				}
+			});
+		});
+
+		//================= navigation ========================
+		//=====================================================
+
+		$('.navigation').css('margin-right',$('.web-container').offset().left);
+		$('#respon-nav').css('margin-right',$('.web-container').offset().left);
+
+		$(document).ready(function(){		
+			jQuery("#respon-nav select").change(function() {
+				window.location = jQuery(this).find("option:selected").val();
+			});
+		});
+	</script>
+</body>
+</html>

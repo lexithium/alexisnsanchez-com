@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alexis N. Sanchez | Developer & Designer</title>
+	<meta charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans:400,400italic,600,600italic,300,300italic|Old+Standard+TT:400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<style type="text/css">
+		p {
+			line-height:1.7em;
+		}
+	</style>
+</head>
+<body>
+	<div class="topruler"></div>
+	<div class="navigation">
+		<ul class="nav-sections">
+			<li><a href="index.html#home">home</a></li>
+			<li><a href="index.html#section-2">about</a></li>
+			<li><a href="index.html#section-1">portfolio</a></li>
+			<li><a href="index.html#section-3">résumé</a></li>
+			<li><a href="#section-4">contact</a></li>
+		</ul>
+	</div>
+	<form id="respon-nav" action="#" method="post">
+		<select style="width:220px;">
+			<option value="index.html#home">Home</option>
+			<option value="index.html#section-2">About</option>
+			<option value="index.html#section-1">Portfolio</option>
+			<option value="index.html#section-3">Résumé</option>
+			<option value="#section-4">Contact</option>
+		</select>
+	</form>
+	<div class="web-container">
+		<div class="logogo">
+			<img src="images/alexLogo.png" alt="" draggable="false">
+		</div>
+	</div>
+	<div class="web-container">
+		<div class="pageruler"></div>
+	</div>
+	<div class="web-container">
+		<!--End navigation/header and begin content-->
+		<p>In winter quarter of 2013, I was approached by <a href="http://www.singingjews.com/">ShireiNU A Cappella</a>, a Jewish student musical group at NU, about designing their new album cover. The <em>Challah Back</em>album was featured in their spring show, <em>ShireiNU Presents: Bowties</em>, and raised more than $3,000 on <a href="http://www.indiegogo.com/projects/support-shireinu-a-cappella-s-first-album-challah-back">Indiegogo</a>.</p>
+		<div class="web-container-small">
+			<img class="first" src="images/ind-portfolio/cd1.jpg">
+			<img class="first" src="images/ind-portfolio/cd2.jpg">
+			<img class="first" src="images/ind-portfolio/cd3.jpg">
+			<img class="first" src="images/ind-portfolio/cd4.jpg">
+			<img class="first" src="images/ind-portfolio/cd5.jpg">
+			<img class="first" src="images/ind-portfolio/cd6.jpg">
+			<img class="first" src="images/ind-portfolio/cd7.jpg">
+			<img class="first" src="images/ind-portfolio/cd8.jpg">
+			<img class="first" src="images/ind-portfolio/cd9.jpg" style="margin-bottom:60px;">
+		</div>
+	<!--End container-->
+	</div>
+	<div id="section-4">
+		<div class="web-container" style="margin-top:0;">
+			<a href="mailto:ansanchezdesign@gmail.com"><img src="images/gmail.png" alt="" draggable="false" class="contact-tools"></a>
+			<a href="http://www.twitter.com/ansanchezdesign" target="_blank"><img src="images/twitter.png" alt="" draggable="false" class="contact-tools"></a>
+			<a href="http://www.ansanchezdesign.tumblr.com" target="_blank"><img src="images/tumblr.png" alt="" draggable="false" class="contact-tools"></a>
+			<a href="http://www.linkedin.com/pub/alexis-n-sanchez/3a/3b3/264" target="_blank"><img src="images/linkedin.png" alt="" draggable="false" class="contact-tools" style="padding-right:0;"></a>
+			<br/>
+			<br/>
+			© Created and designed by Alexis N. Sanchez, 2014
+		</div>
+	</div>
+	<script type="text/javascript">
+		//================= smooth scroll =====================
+		//=====================================================
+
+		$(function() {
+			$('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					if (target.length) {
+						$('html,body').animate({
+						scrollTop: target.offset().top - 40
+						}, 600);
+						return false;
+					}
+				}
+			});
+		});
+
+		//================= navigation ========================
+		//=====================================================
+
+		$('.navigation').css('margin-right',$('.web-container').offset().left);
+		$('#respon-nav').css('margin-right',$('.web-container').offset().left);
+
+		$(document).ready(function(){		
+			jQuery("#respon-nav select").change(function() {
+				window.location = jQuery(this).find("option:selected").val();
+			});
+		});
+	</script>
+</body>
+</html>
