@@ -1,5 +1,27 @@
 // Dynamically load header and footer
-$('#header').load('header.html');
+$('#header').load('header.html', function() {
+	$('.static-navigation').waypoint(function(dir) {
+		if(dir === "down") {
+			$('.static-navigation, #section-logo').animate({
+				height: 'toggle'
+			}, 100);
+			$('.big-sea-emul').animate({
+				top: 0
+			}, 100);
+		} else if(dir === 'up') {
+			$('.static-navigation, #section-logo').animate({
+				height: 'toggle'
+			}, 100);
+			$('.big-sea-emul').animate({
+				top: '-50px'
+			}, 100);
+		}
+	}, {
+		offset: function() {
+			return -$(this).height();
+		}
+	});
+});
 $('#footer').load('footer.html');
 
 // smooth scroll
@@ -19,14 +41,20 @@ $(function() {
 });
 
 // navigation
-$('.navigation').css('margin-right',$('.web-container').offset().left);
-$('#respon-nav').css('margin-right',$('.web-container').offset().left);
-
 $(document).ready(function(){		
 	jQuery("#respon-nav select").change(function() {
 		window.location = jQuery(this).find("option:selected").val();
 	});
 });
+
+//alternativ navigation after scrolling past static navigation
+// $('.static-navigation').waypoint(function(dir) {
+// 	console.log(dir);
+// }, {
+// 	offset: function() {
+// 		return -$(this).height();
+// 	}
+// });
 
 // enable masonry from isotope
 var $container = $('#web-container-mason');
@@ -67,8 +95,5 @@ $(window).resize(function() {
 				columnWidth: $container.width()/4
 			}
 		});
-
-		$('.navigation').css('margin-right',$('.web-container').offset().left);
-		$('#respon-nav').css('margin-right',$('.web-container').offset().left);
 	},500);
 });
