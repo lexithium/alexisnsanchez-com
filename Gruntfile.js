@@ -2,24 +2,24 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
-		// sass: {
-		// 	dist: {
-		// 		options: {
-		// 			style: 'nested'
-		// 		},
-		// 		files: {
-		// 			'css/base.css': 'css/base.scss'
-		// 		},
-		// 	},
-		// },
+		sass: {
+			dist: {
+				options: {
+					style: 'nested'
+				},
+				files: {
+					'css/base.css': 'css/base.scss'
+				},
+			},
+		},
 
-		// autoprefixer: {
-		// 	dist: {
-		// 		files: {
-		// 			'css/style.css': 'css/base.css'
-		// 		},
-		// 	},
-		// },
+		autoprefixer: {
+			dist: {
+				files: {
+					'css/style.css': 'css/base.css'
+				},
+			},
+		},
 
 		connect: {
 			server: {
@@ -43,8 +43,8 @@ module.exports = function(grunt) {
 				},
 			},
 			css: {
-				files: ['css/*.css'],
-				// tasks: ['sass', 'autoprefixer'],
+				files: ['css/*.scss'],
+				tasks: ['sass', 'autoprefixer'],
 				options: {
 					spawn: false,
 				},
@@ -58,10 +58,10 @@ module.exports = function(grunt) {
 		},
 	});
 
-	// grunt.loadNpmTasks('grunt-contrib-sass');
-	// grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', [/*'sass', 'autoprefixer', */'connect', 'watch']);
+	grunt.registerTask('default', ['sass', 'autoprefixer', 'connect', 'watch']);
 }

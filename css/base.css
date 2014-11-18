@@ -26,8 +26,7 @@ a, a:visited {
   height: auto;
   overflow: auto;
   margin: 0 auto;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 #proyecto-container {
   width: 100%;
@@ -35,8 +34,7 @@ a, a:visited {
   height: auto;
   position: relative;
   margin: 0 auto;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 #proyecto {
   content: "projects";
@@ -136,8 +134,7 @@ a, a:visited {
   top: -50px;
   left: 0;
   z-index: 999;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
   .big-sea-emul img {
     float: left;
     margin-left: 20px;
@@ -388,14 +385,23 @@ a, a:visited {
 
 .isotope, .isotope .isotope-item {
   -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
   transition-duration: 0.8s; }
 
 .isotope {
   -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
   transition-property: height, width; }
 
 .isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
   transition-property: transform, opacity; }
 
 /**** disabling Isotope CSS3 transitions ****/
@@ -403,6 +409,9 @@ a, a:visited {
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
   -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
   transition-duration: 0s; }
 
 /*============== for about =====================
@@ -439,8 +448,7 @@ a, a:visited {
 ==============================================*/
 #section-3 {
   padding: 0px 15px;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .serify {
   font-family: "Old Standard TT", serif;
@@ -509,8 +517,7 @@ a, a:visited {
   text-align: center;
   color: white;
   font-size: 0.8em;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .contact-tools {
   padding-right: 20px;
@@ -523,16 +530,14 @@ a, a:visited {
   max-width: 900px;
   height: auto;
   margin: 40px auto 0 auto;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .web-container-si {
   width: 100%;
   max-width: 600px;
   height: auto;
   margin: 40px auto 0 auto;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .first {
   width: 100%;
@@ -729,3 +734,5 @@ a, a:visited {
   .filter-buttons {
     margin-left: 0px;
     margin-right: 0px; } }
+
+/*# sourceMappingURL=base.css.map */
