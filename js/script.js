@@ -47,15 +47,6 @@ $(document).ready(function(){
 	});
 });
 
-//alternativ navigation after scrolling past static navigation
-// $('.static-navigation').waypoint(function(dir) {
-// 	console.log(dir);
-// }, {
-// 	offset: function() {
-// 		return -$(this).height();
-// 	}
-// });
-
 // enable masonry from isotope
 var $container = $('#web-container-mason');
 //initialize
