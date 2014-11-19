@@ -74,6 +74,13 @@ filterButtons.click(function() {
 	return false;
 });
 
+//only display online projects in portfolio on phone
+var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) ||
+(navigator.userAgent.match(/(iPod|iPhone|iPad|BlackBerry|Windows Phone|iemobile)/));
+if(isMobile) {
+	$container.isotope({filter: ".online"});
+}
+
 // on resize of the page
 $(window).resize(function() {
 	setTimeout(function() {
