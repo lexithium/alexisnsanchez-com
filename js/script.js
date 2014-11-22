@@ -1,17 +1,13 @@
 // Dynamically load header and footer
 $('#header').load('header.html', function() {
+	var header_position = $('#header').position().top + $('#header').outerHeight();
+
 	$('.static-navigation').waypoint(function(dir) {
 		if(dir === "down") {
-			$('.static-navigation, #section-logo').animate({
-				height: 'toggle'
-			}, 100);
 			$('.big-sea-emul').animate({
 				top: 0
 			}, 100);
 		} else if(dir === 'up') {
-			$('.static-navigation, #section-logo').animate({
-				height: 'toggle'
-			}, 100);
 			$('.big-sea-emul').animate({
 				top: '-50px'
 			}, 100);
@@ -21,6 +17,12 @@ $('#header').load('header.html', function() {
 			return -$(this).height();
 		}
 	});
+
+	if($(document).scrollTop() > header_position) {
+		$('.big-sea-emul').animate({
+			top: 0
+		}, 100);
+	}
 });
 $('#footer').load('footer.html');
 
