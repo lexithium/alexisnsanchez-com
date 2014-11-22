@@ -11,3 +11,4 @@ Visit it at [alexisnsanchez.com](http://www.alexisnsanchez.com).
 - [Grunt](http://gruntjs.com)
 - [Isotope](http://isotope.metafizzy.co/)
 - [Google Fonts](http://google.com/fonts)
+- [Glyphicons](http://www.glyphicons.com)
