@@ -521,9 +521,11 @@ a, a:visited {
   color: white;
   font-size: 0.8em;
   box-sizing: border-box; }
+  #section-4 p {
+    margin: 10px 0; }
 
 .contact-tools {
-  padding-right: 20px;
+  padding-right: 10px;
   display: inline-block; }
 
 /*============== additional stuff ==============
