@@ -42,12 +42,11 @@ a, a:visited {
        box-sizing: border-box; }
 
 #proyecto {
-  content: "projects";
   color: white;
   background-color: #272822;
   padding: 10px;
   position: absolute;
-  top: 30px;
+  top: 0;
   left: -10px;
   font-size: 2em;
   font-family: "Quicksand", sans-serif;
@@ -225,7 +224,11 @@ a, a:visited {
   background-color: gray;
   margin: 5px;
   border-radius: 5px;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  background-size: cover;
+  background-position: center center; }
+  .project p {
+    padding: 5px; }
 
 .project.w2 {
   width: 49%; }
@@ -345,11 +348,6 @@ a, a:visited {
   background-size: cover;
   background-position: center center; }
 
-#trauma-thumb {
-  background-image: url("../images/trauma.jpg");
-  background-size: cover;
-  background-position: center center; }
-
 #d3-thumb {
   background-image: url("../images/murals.jpg");
   background-size: cover;
@@ -367,11 +365,6 @@ a, a:visited {
 
 #oddities-thumb {
   background-image: url("../images/oddities.jpg");
-  background-size: cover;
-  background-position: center center; }
-
-#barguide-thumb {
-  background-image: url("../images/barguide.jpg");
   background-size: cover;
   background-position: center center; }
 
