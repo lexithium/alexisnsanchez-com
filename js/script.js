@@ -1,6 +1,6 @@
 // Dynamically load header and footer
-$('#header').load('header.html', function() {
-	var header_position = $('#header').position().top + $('#header').outerHeight();
+$(document).ready(function() {
+	var header_position = $('#section-logo').position().top;
 
 	$('.static-navigation').waypoint(function(dir) {
 		if(dir === "down") {
@@ -24,8 +24,6 @@ $('#header').load('header.html', function() {
 		}, 100);
 	}
 });
-$('#footer').load('footer.html');
-
 // smooth scroll
 $(function() {
 	$('a[href*=#]:not([href=#])').click(function() {
