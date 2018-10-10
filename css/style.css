@@ -660,7 +660,7 @@ a, a:visited {
     margin: 0 auto; }
 
   .hoverstates {
-    color: transparent; }
+    color: rgba(0, 0, 0, 0); }
 
   .one-third {
     display: none; }
@@ -719,7 +719,7 @@ a, a:visited {
     margin: 0 auto; }
 
   .hoverstates {
-    color: transparent; }
+    color: rgba(0, 0, 0, 0); }
 
   .circle-photo {
     display: none; }
@@ -792,7 +792,7 @@ a, a:visited {
     margin: 0 auto; }
 
   .hoverstates {
-    color: transparent; }
+    color: rgba(0, 0, 0, 0); }
 
   .circle-photo {
     display: none; }
